@@ -1,10 +1,10 @@
-/* -- generell styles */
+/* -- general styles */
 
 @import url('https://fonts.googleapis.com/css?family=Special+Elite|Ubuntu');
 
 * {
   margin: 0px;
-  paddding: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
