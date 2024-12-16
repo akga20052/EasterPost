@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Easter!</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://kit.fontawesome.com/682c20446b.js" crossorigin="anonymous"></script>
-
+    <title>Holidays Around the Year</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Holidays Around the Year</h1>
+    </header>
 
-<marquee class="GeneratedMarquee" direction="left" scrollamount="50" behavior="scroll">Happy Easter! From my family to yours! 🐰🌷🥚🎉</marquee>
-
-<div class="container">
-    
-    <div class="egg"></div>
-    
-    <div class="bunny">
-            <div class="bunny_hands"></div>
-            <div class="bunny_head">
-                <div class="bunny__eyes"></div>
-                <div class="bunny__cheeks"></div>
-                <div class="bunny__nose"></div>
-                <div class="bunny__mouth"></div>
-            </div>
-            <div class="bunny_ear__left"></div>
-            <div class="bunny_ear__right"></div>
+    <main>
+        <div id="holidayDisplay" class="holiday-container">
+            <h2 id="holidayTitle">Loading...</h2>
+            <p id="holidayDescription">Finding the holiday for this month...</p>
+            <img id="holidayImage" src="" alt="" />
         </div>
-    
-</div>
+    </main>
 
-<footer>
-  <p>
-    Made with <i class="fa-solid fa-heart"></i> Constance Dubose 2024 ||  Thank you :)
-  </p>
-</footer>
+    <!-- Custom Popup -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <p>Welcome to the holidays around the year!</p>
+            <p>Send this website to all your family and friends for each major holiday from January to December.</p>
+            <button id="closePopup" class="close-btn">Close</button>
+        </div>
+    </div>
 
+    <footer>
+        <p>Made with ❤ by Constance Dubose, 2024</p>
+    </footer>
 </body>
 </html>

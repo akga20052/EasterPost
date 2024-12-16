@@ -1,260 +1,111 @@
-/* -- general styles */
-
-@import url('https://fonts.googleapis.com/css?family=Special+Elite|Ubuntu');
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
+/* General Reset */
 body {
-  background: #6520e4;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Soft gray background */
+    color: #333; /* Dark gray text */
+    text-align: center;
 }
 
-h1 {
-  font-family: Ubuntu;
-  color: #EA93BE;
-  text-align: center;
-  margin-top: 5%;
+/* Header */
+header {
+    background-color: #0056b3; /* Rich blue */
+    color: white;
+    padding: 20px 0;
 }
 
-/* --container -- */
-
-.container {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    height: 500px;
-    width: 500px;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-/* --------- THE EGG --------- */
-
-.egg {
-    height: 350px;
-    width: 260px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    background-color:#EF8EBE;
-    background-image: radial-gradient(white 15%, transparent 16%),
-radial-gradient(white 15%, transparent 16%);
-    background-size: 60px 60px;
-    background-position: 0 0, 30px 30px;
-    z-index: 2;
+/* Main Content */
+main {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: white; /* White background for content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* --------- THE BUNNY --------- */
-
-.bunny {
-    position: relative;
-    top: 70px;
-    left: 115px;
+.holiday-container {
+    margin: 20px 0;
 }
 
-.bunny_hands {
-    position: absolute;
-    width: 30px;
-    height: 40px;
-    background: #fff;
-    top: 80px;
-    left: 10px;
-    border-radius: 50%;
-    transform: rotate(25deg);
-    z-index: 3;
-}
-.bunny_hands::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 40px;
-    background: #fff;
-    top: -125px;
-    left: 50px;
-    border-radius: 50%;
-    transform: rotate(60deg);
+#holidayTitle {
+    font-size: 2em;
+    color: #ff4d4d; /* Festive red for titles */
 }
 
-.bunny_head {
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    background: #fff;
-    border-radius: 50%;
-    top: -60px;
-    left: -40px;
-    z-index: 1;
+#holidayDescription {
+    font-size: 1.2em;
+    color: #555; /* Medium gray for description text */
 }
 
-.bunny__eyes {
-    position: absolute;
-    top: 50px;
-    left: 30px;
-    width: 10px;
-    height: 20px;
-    background: black;
-    border-radius: 50%;
-    transform: rotate(-45deg);
-    box-shadow: 35px 0px 0px #000;
-}
-
-.bunny__cheeks {
-    position: absolute;
-    top: 75px;
-    left: 33px;
-    width: 20px;
-    height: 8px;
-    background: #FDEBFC;
-    border-radius: 50%;
-    transform: rotate(-45deg);
-    box-shadow: 50px 0px 0px #FDEBFC;
-}
-
-.bunny__nose {
-    position: absolute;
-    top: 60px;
-    left: 60px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid black;
-    border-radius: 50%;
-    transform: rotate(125deg);
-}
-
-.bunny__mouth {
-    position: absolute;
-    top: 60px;
-    left: 77px;
-    height: 22px;
-    width: 3px;
-    background: black;
-    transform: rotate(130deg);
-}
-.bunny__mouth::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -12px;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border-radius: 50%;
-    border-top: 4px solid #000;
-}
-
-/* -- BUNNY EARS -- */
-
-@keyframes left_ear_animation {
-    0% {
-        transform: rotate(-80deg);
-    }
-    50% {
-        transform: rotate(-72deg);
-    }
-    100% {
-        transform: rotate(-80deg);
-    }
-}
-
-@keyframes right_ear_animation {
-    0% {
-        transform: rotate(-20deg);
-    }
-    50% {
-        transform: rotate(-12deg);
-    }
-    100% {
-        transform: rotate(-20deg);
-    }
-}
-
-.bunny_ear__left {
-    position: absolute;
-    top: -110px;
-    left: -100px;
-    height: 170px;
-    width: 45px;
-    background: #fff;
-    border-radius: 50%;
-    transform: rotate(-80deg);
-    animation: left_ear_animation 1.4s linear infinite;
-}
-.bunny_ear__left::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 7px;
-    height: 130px;
-    width: 30px;
-    background: #FDEBFC;
-    border-radius: 50%;
-}
-
-.bunny_ear__right {
-    position: absolute;
-    top: -160px;
-    left: -40px;
-    height: 170px;
-    width: 45px;
-    background: #fff;
-    border-radius: 50%;
-    transform: rotate(-20deg);
-    animation: right_ear_animation 1.4s linear infinite;
-    animation-delay: 0.7s;
-}
-.bunny_ear__right::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 7px;
-    height: 130px;
-    width: 30px;
-    background: #FDEBFC;
-    border-radius: 50%;
-}
-
-/* -- FOOTER -- */
-
+/* Footer */
 footer {
-  background: #454f5b;
-  color: #fff;
-  font-family: Ubuntu;
-  font-size: 13px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 987;
+    background: #0056b3; /* Dark gray footer */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-footer i {
-  color: #ee7898;
+/* Updated Holiday Image Styling */
+#holidayImage {
+    width: 100%;
+    max-width: 80%; /* Limiting max width to 80% of the parent container */
+    height: auto; /* Ensure the image maintains its aspect ratio */
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer a {
-  color: #ee7898;
-  text-decoration: none;
+/* Overlay for the popup */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Codes by HTML.am */
-
-/* CSS Code */
-.GeneratedMarquee {
-    font-family:'Comic Sans MS';
-    font-size:5em;
-    line-height:1.3em;
-    color:#db1a9b;
-    background-color:#FFFFCC;
-    padding:1.5em;
+/* Popup box */
+.popup-content {
+    background-color: white; /* White background for the popup */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    color: #333; /* Dark text for readability */
 }
+
+/* Button style */
+.close-btn {
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Red button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #ff1a1a; /* Darker red for hover */
+}
+
+/* Additional Styling for Special Holidays (Optional) */
+.special-holiday {
+    color: #f1c40f; /* Gold for special holiday titles or highlights */
+}
+
